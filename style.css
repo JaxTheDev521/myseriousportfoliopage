@@ -13,7 +13,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    height: 600vhvh;
+    height: 400vh;
     background-color: #fceee3;
 }
 .navbar{
@@ -107,7 +107,7 @@ a:active {
     gap: 15px;
 }
 .hero-right p{
-     font-size: clamp(1rem, 2.3vw, 1.1rem);
+     font-size: clamp(2rem, 3vw, 1.1rem);
 }
 .hero-right p span{
     font-weight: bold;
@@ -192,7 +192,7 @@ a:active {
 .project-card p {
     text-align: start;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: clamp(4px, 2vw, 16px);
+    font-size: clamp(1rem, 2vw, 4rem);
 }
 /*stylings for container3*/
 #container4{
@@ -253,6 +253,12 @@ a:active {
 /* SECTION */
 .contact {
   padding: clamp(3rem, 8vw, 6rem) 1rem;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  min-height: 100vh;  
 }
 
 /* GRID LAYOUT */
@@ -260,9 +266,10 @@ a:active {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   align-items: center;
   gap: clamp(2rem, 6vw, 5rem);
+  margin-left: clamp(0rem,9vw,9rem);
 }
 
 /* FORM */
@@ -274,7 +281,7 @@ a:active {
 .contact-form form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .contact-form input,
@@ -284,6 +291,7 @@ a:active {
   font-size: 1rem;
   border: 2px solid #e0e0e0;
   border-radius: 6px;
+  font-family: Gravitas One;
 }
 
 .contact-form textarea {
@@ -303,9 +311,16 @@ a:active {
 }
 
 /* HAND IMAGE */
-.contact-hand img {
+.myhand2 {
   width: clamp(180px, 30vw, 320px);
   height: auto;
+  position: absolute;
+  top: 62px;
+  right: -100px;
+  width: 40%;       
+  max-width: 420px; 
+  height: auto;
+  z-index: -1;  
 }
 
 /* FOOTER TEXT */
@@ -314,6 +329,9 @@ a:active {
   margin-top: 4rem;
   font-size: 0.9rem;
   color: #999;
+}
+.contact-form{
+  width: 50%;
 }
 
 
@@ -334,6 +352,7 @@ a:active {
   .contact-container {
     grid-template-columns: 1fr;
     text-align: center;
+    margin-left: 0px;
   }
 
   .contact-form button {
@@ -343,4 +362,11 @@ a:active {
   .contact-hand {
     display: none;
   }
+.myhand2{
+  display: none;
 }
+  .contact-form {
+    width: 100%;
+  }
+}
+
